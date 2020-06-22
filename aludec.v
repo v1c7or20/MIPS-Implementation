@@ -1,11 +1,12 @@
+
 module aludec(input  [5:0] funct,
               input  [1:0] aluop,
               output reg [3:0] alucontrol);
 
   always @ (*)
     case(aluop)
-      2'b00: alucontrol <= 4'b010;  // add
-      2'b01: alucontrol <= 4'b110;  // sub
+      2'b00: alucontrol <= 4'b0000;  // add
+      2'b01: alucontrol <= 4'b0010;  // sub
       default: case(funct)          // RTYPE
           6'b100000: alucontrol <= 4'b0000; // ADD
           6'b100010: alucontrol <= 4'b0010; // SUB

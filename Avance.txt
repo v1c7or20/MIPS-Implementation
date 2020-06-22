@@ -1,0 +1,12 @@
+Funcionan Sin Problemas:
+sll2.v
+signext.v
+regfile.v
+adder.v
+alu.v
+alu_aritmetical.v
+alu_logical.v
+flopr.v
+instrutionMemory.v
+mux2.v
+flopenr.v
