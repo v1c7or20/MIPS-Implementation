@@ -10,3 +10,5 @@ flopr.v
 instrutionMemory.v
 mux2.v
 flopenr.v
+dataMemory.v
+
