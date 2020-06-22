@@ -3,4 +3,4 @@
 ## Integrates
 
 ### Victor Angelo Peña Andia
-### Remzo Martin Tenazoa Ramirez
+### Renzo Martin Tenazoa Ramirez
