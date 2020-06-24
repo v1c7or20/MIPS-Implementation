@@ -18,7 +18,11 @@ module testbench();
   // generate clock to sequence tests
   always
     begin
+<<<<<<< HEAD
       clk <= 1; # 5 clk = ~clk;
+=======
+      clk <= 1; # 5; clk <= 0; # 5;
+>>>>>>> parent of c789df2... saliooooooooooooooooo
       $monitor("Clk: %h, reset: %h, pc: %h, instr: %h, writedata: %h, memwrite: %h, readdata: %h"
       ,clk, reset, dut.pc, dut.instr, writedata, memwrite, dut.readdata); #5;
     end
