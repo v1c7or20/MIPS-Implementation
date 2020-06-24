@@ -18,7 +18,7 @@ module testbench();
   // generate clock to sequence tests
   always
     begin
-      clk <= 1; # 5; clk <= 0; # 5;
+      clk <= 1; # 5 clk = ~clk;
       $monitor("Clk: %h, reset: %h, pc: %h, instr: %h, writedata: %h, memwrite: %h, readdata: %h"
       ,clk, reset, dut.pc, dut.instr, writedata, memwrite, dut.readdata); #5;
     end
