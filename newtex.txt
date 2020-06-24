@@ -1,0 +1,1 @@
+ERROR: mipstest.v:22: $monitor does not support argument type (vpiModule).

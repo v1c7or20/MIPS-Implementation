@@ -19,8 +19,8 @@ module testbench();
   always
     begin
       clk <= 1; # 5; clk <= 0; # 5;
-      $monitor("Clk: %h, reset: %h, pc: %h, instr: %h, writedata: %h, memwrite: %h, readdata: %h"
-      ,clk, reset, dut.pc, dut.instr, writedata, memwrite, dut.readdata); #5;
+      $monitor("Clk: %h, reset: %h, pc: %h, instr: %h, writedata: %h, memwrite: %h, readdata: %h, dataadr: %h"
+      ,clk, reset, dut.pc, dut.instr, writedata, memwrite, dut.readdata, dataadr); #5;
     end
   // check that 7 gets written to address 84
   always@(negedge clk)
