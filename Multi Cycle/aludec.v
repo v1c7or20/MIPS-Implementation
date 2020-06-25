@@ -1,7 +1,7 @@
 
-module aludec(input  logic [5:0] funct,
-              input  logic [1:0] aluop,
-              output logic [2:0] alucontrol);
+module aludec(input   [5:0] funct,
+              input   [1:0] aluop,
+              output  [2:0] alucontrol);
 
   // ADD CODE HERE
   // Complete the design for the ALU Decoder.

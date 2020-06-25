@@ -1,10 +1,10 @@
 
-module maindec(input  logic       clk, reset, 
-               input  logic [5:0] op, 
-               output logic       pcwrite, memwrite, irwrite, regwrite,
-               output logic       alusrca, branch, iord, memtoreg, regdst,
-               output logic [1:0] alusrcb, pcsrc,
-               output logic [1:0] aluop);
+module maindec(input         clk, reset, 
+               input   [5:0] op, 
+               output        pcwrite, memwrite, irwrite, regwrite,
+               output        alusrca, branch, iord, memtoreg, regdst,
+               output  [1:0] alusrcb, pcsrc,
+               output  [1:0] aluop);
 
   parameter   FETCH   = 4'b0000; // State 0
   parameter   DECODE  = 4'b0001; // State 1
@@ -26,8 +26,8 @@ module maindec(input  logic       clk, reset,
   parameter   ADDI    = 6'b001000;	// Opcode for addi
   parameter   J       = 6'b000010;	// Opcode for j
 
-  logic [3:0]  state, nextstate;
-  logic [14:0] controls;
+  wire [3:0]  state, nextstate;
+  wire [14:0] controls;
 
   // state register
   always_ff @(posedge clk or posedge reset)			
@@ -52,16 +52,20 @@ module maindec(input  logic       clk, reset,
                  default: nextstate <= 4'bx; // should never happen
                endcase
  		// Add code here
-      MEMADR:
-      MEMRD: 
-      MEMWB: 
-      MEMWR: 
-      RTYPEEX: 
-      RTYPEWB: 
-      BEQEX:   
-      ADDIEX:  
-      ADDIWB:  
-      JEX:     
+      MEMADR:  case (op)
+                LW:       nextstate <= MEMRD;
+                SW:       nextstate <= MEMWR;
+                default:  nextstate <= 4'bx; // should never happen
+               endcase
+      MEMRD:    nextstate <= MEMWB; 
+      MEMWB:    nextstate <= FETCH;
+      MEMWR:    nextstate <= FETCH;
+      RTYPEEX:  nextstate <= RTYPEEX;
+      RTYPEWB:  nextstate <= FETCH;
+      BEQEX:    nextstate <= FETCH;
+      ADDIEX:   nextstate <= ADDIWB;
+      ADDIWB:   nextstate <= FETCH;
+      JEX:      nextstate <= FETCH;
       default: nextstate <= 4'bx; // should never happen
     endcase
 

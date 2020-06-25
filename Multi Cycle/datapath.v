@@ -7,26 +7,26 @@
 // the instruction register is instantiated as a 32-bit flopenr.
 // The other submodules are likewise instantiated.
 
-module datapath(input  logic        clk, reset,
-                input  logic        pcen, irwrite, regwrite,
-                input  logic        alusrca, iord, memtoreg, regdst,
-                input  logic [1:0]  alusrcb, pcsrc, 
-                input  logic [2:0]  alucontrol,
-                output logic [5:0]  op, funct,
-                output logic        zero,
-                output logic [31:0] adr, writedata, 
-                input  logic [31:0] readdata);
+module datapath(input          clk, reset,
+                input          pcen, irwrite, regwrite,
+                input          alusrca, iord, memtoreg, regdst,
+                input   [1:0]  alusrcb, pcsrc, 
+                input   [2:0]  alucontrol,
+                output  [5:0]  op, funct,
+                output         zero,
+                output  [31:0] adr, writedata, 
+                input   [31:0] readdata);
 
   // Below are the internal signals of the datapath module.
 
-  logic [4:0]  writereg;
-  logic [31:0] pcnext, pc;
-  logic [31:0] instr, data, srca, srcb;
-  logic [31:0] a;
-  logic [31:0] aluresult, aluout;
-  logic [31:0] signimm;   // the sign-extended immediate
-  logic [31:0] signimmsh;	// the sign-extended immediate shifted left by 2
-  logic [31:0] wd3, rd1, rd2;
+  wire [4:0]  writereg;
+  wire [31:0] pcnext, pc;
+  wire [31:0] instr, data, srca, srcb;
+  wire [31:0] a;
+  wire [31:0] aluresult, aluout;
+  wire [31:0] signimm;   // the sign-extended immediate
+  wire [31:0] signimmsh;	// the sign-extended immediate shifted left by 2
+  wire [31:0] wd3, rd1, rd2;
 
   // op and funct fields to controller
   assign op = instr[31:26];

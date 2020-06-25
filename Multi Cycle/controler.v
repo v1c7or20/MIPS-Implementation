@@ -1,13 +1,13 @@
-module controller(input  logic       clk, reset,
-                  input  logic [5:0] op, funct,
-                  input  logic       zero,
-                  output logic       pcen, memwrite, irwrite, regwrite,
-                  output logic       alusrca, iord, memtoreg, regdst,
-                  output logic [1:0] alusrcb, pcsrc,
-                  output logic [2:0] alucontrol);
+module controller(input         clk, reset,
+                  input   [5:0] op, funct,
+                  input         zero,
+                  output        pcen, memwrite, irwrite, regwrite,
+                  output        alusrca, iord, memtoreg, regdst,
+                  output  [1:0] alusrcb, pcsrc,
+                  output  [2:0] alucontrol);
 
-  logic [1:0] aluop;
-  logic       branch, pcwrite;
+  wire [1:0] aluop;
+  wire       branch, pcwrite;
 
   // Main Decoder and ALU Decoder subunits.
   maindec md(clk, reset, op,

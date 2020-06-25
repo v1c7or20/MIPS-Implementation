@@ -1,8 +1,3 @@
-//-------------------------------------------------------
-// mipsmulti.sv
-// From David_Harris and Sarah_Harris book design
-// Multicycle MIPS processor
-//------------------------------------------------
 
 module mips(input  logic        clk, reset,
             output logic [31:0] adr, writedata,
