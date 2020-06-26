@@ -24,7 +24,10 @@ module datapath(input          clk, reset,
   assign op = instr[31:26];
   assign funct = instr[5:0];
 
-  
+  flopenr flop1(clk, reset, pcen, pc_alu, pc);
+  mux2 #(32)  pcbrmux(pc, aluout, iord,
+                      a);
+                      
   // Your datapath hardware goes below.  Instantiate each of the submodules
   // that you need.  Remember that alu's, mux's and various other 
   // versions of parameterizable modules are available in mipsparts.sv

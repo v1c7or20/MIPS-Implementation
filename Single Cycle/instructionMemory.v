@@ -6,7 +6,7 @@ module instructionMemory(input [5:0]  a,
 
   initial
     begin
-      $readmemh("memfile2.dat",RAM); // initialize memory
+      $readmemh("memfile2.data",RAM); // initialize memory
     end
 
   assign rd = RAM[a]; // word aligned

@@ -34,7 +34,7 @@ module datapath(input         clk, reset,
                     regdst, writereg);
   mux2 #(32)  resmux(aluout, readdata,
                      memtoreg, result);
-  signext     se(instr[15:0], signimm);
+  signext     se(instr[15:0], alusrc, alucontrol, signimm);
 
   // ALU logic
   mux2 #(32)  srcbmux(writedata, signimm, alusrc,
