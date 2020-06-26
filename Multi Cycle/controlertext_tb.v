@@ -18,25 +18,17 @@ module testbench();
       reset <= 1; # 22; reset <= 0;
     end
 
+// generate vector
+
   // generate clock to sequence tests
   always
     begin
       clk <= 1; # 5 clk = ~clk;
-      $monitor("Clk: %h, reset: %h, pc: %h, instr: %h, writedata: %h, memwrite: %h, readdata: %h, dataadr: %h"
-      ,clk, reset, dut.pc, dut.instr, writedata, memwrite, dut.readdata, dataadr); #5;
+      $monitor("Clk: %h, reset: %h, op: %h, funct: %h, zero: %h, pcen: %h,
+       memwrite: %h, irwrite: %h, regwrite: %h, alusra: %h, iord: %h, memtoreg: %h,
+        regdst: %h, alusrcb: %h, pcsrc: %h"
+      clk, reset, op, funct, zero, pcen, memwrite,
+  irwrite, regwrite, alusrca, iord, memtoreg, regdst, alusrcb, pcsrc); #5;
     end
   // check that 7 gets written to address 84
-  always@(negedge clk)
-    begin
-      if(memwrite) begin
-        if(dataadr === 84 & writedata === 7) begin
-          $display();
-          $display("Simulation succeeded");
-          $stop;
-        end else if (dataadr !== 80) begin
-          $display("Simulation failed");
-          $stop;
-        end
-      end
-    end
-endmodule
+
