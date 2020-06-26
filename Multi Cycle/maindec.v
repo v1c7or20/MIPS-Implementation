@@ -81,9 +81,16 @@ module maindec(input         clk, reset,
     case(state)
       FETCH:   controls <= 15'h5010;
       DECODE:  controls <= 15'h0030;
-    // your code goes here      
-    
-	 
+      MEMADR:  controls <= 15'b000010000100000;
+      MEMRD:   controls <= 15'b000000100000000;
+      MEMWB:   controls <= 15'b000100010000000;
+      MEMWR:   controls <= 15'b010000100000000;
+      RTYPEEX: controls <= 15'b000010000000010; 
+      RTYPEWB: controls <= 15'b000100001000000;
+      BEQEX:   controls <= 15'b000011000000100;
+      ADDIEX:  controls <= 15'b000010000100000;
+      ADDIWB:  controls <= 15'b000100000000000;
+      JEX:     controls <= 15'b100000000001000;
       default: controls <= 15'hxxxx; // should never happen
     endcase
 endmodule

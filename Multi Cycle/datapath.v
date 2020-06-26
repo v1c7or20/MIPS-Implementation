@@ -1,12 +1,4 @@
 
-// Complete the datapath module below for Lab 11.
-// You do not need to complete this module for Lab 10
-
-// The datapath unit is a structural verilog module.  That is,
-// it is composed of instances of its sub-modules.  For example,
-// the instruction register is instantiated as a 32-bit flopenr.
-// The other submodules are likewise instantiated.
-
 module datapath(input          clk, reset,
                 input          pcen, irwrite, regwrite,
                 input          alusrca, iord, memtoreg, regdst,
@@ -20,7 +12,7 @@ module datapath(input          clk, reset,
   // Below are the internal signals of the datapath module.
 
   wire [4:0]  writereg;
-  wire [31:0] pcnext, pc;
+  wire [31:0] pcnext, pc;_
   wire [31:0] instr, data, srca, srcb;
   wire [31:0] a;
   wire [31:0] aluresult, aluout;
@@ -32,6 +24,7 @@ module datapath(input          clk, reset,
   assign op = instr[31:26];
   assign funct = instr[5:0];
 
+  
   // Your datapath hardware goes below.  Instantiate each of the submodules
   // that you need.  Remember that alu's, mux's and various other 
   // versions of parameterizable modules are available in mipsparts.sv
