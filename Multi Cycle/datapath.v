@@ -12,9 +12,9 @@ module datapath(input          clk, reset,
   // Below are the internal signals of the datapath module.
 
   wire [4:0]  writereg;
-  wire [31:0] pcnext, pc;_
+  wire [31:0] pcnext, pc;
   wire [31:0] instr, data, srca, srcb;
-  wire [31:0] a;
+  wire [31:0] a,b;
   wire [31:0] aluresult, aluout;
   wire [31:0] signimm;   // the sign-extended immediate
   wire [31:0] signimmsh;	// the sign-extended immediate shifted left by 2
@@ -24,16 +24,37 @@ module datapath(input          clk, reset,
   assign op = instr[31:26];
   assign funct = instr[5:0];
 
-  flopenr flop1(clk, reset, pcen, pc_alu, pc);
-  mux2 #(32)  pcbrmux(pc, aluout, iord,
-                      a);
-                      
-  // Your datapath hardware goes below.  Instantiate each of the submodules
-  // that you need.  Remember that alu's, mux's and various other 
-  // versions of parameterizable modules are available in mipsparts.sv
-  // from Lab 9. You'll likely want to include this verilog file in your
-  // simulation.
+  flopenr #(32) flop1(clk, reset, pcen, pcnext, pc);
+  
+  mux2 #(32)  pcbrmux(pc, aluout, iord,adr);
+  
+  //mem falta
+  
+  flopenr #(32) flop2(clk, reset, irwrite, memout, instr);
+  
+  flopr #(32) flopr(clk, reset, memout, data);
+  
+  mux2 #(5)  regdestmux(instr[20:16], instr[15:11], regdst);
+  
+  mux2 #(32)  mentregmux(aluout, data, w3);
+  
+  regfile rf (clk, regwrite, instr[25:21], instr[20:16], w3, rd1, rd2);
+  
+  signext     se(instr[15:0], signimm);
+  
+  flopr #(32) flopra(clk, reset, rd1, a);
+  
+  flopr #(32) floprb(clk, reset, rd2, b);
+  
+  mux2 #(5)  regdestmux(pc[31:18], a[31:28], srca);
 
+  sl2 s1(signimm, signimmsh);
+
+  mux4 #(32) m4(b, 32'd4, signimm, signimmsh);
+
+  alu alu1(srca, srcb, alucontrol, zero, aluresult );
+
+  
   // We've included parameterizable 3:1 and 4:1 muxes below for your use.
 
   // Remember to give your instantiated modules applicable names
