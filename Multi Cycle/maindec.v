@@ -26,11 +26,11 @@ module maindec(input         clk, reset,
   parameter   ADDI    = 6'b001000;	// Opcode for addi
   parameter   J       = 6'b000010;	// Opcode for j
 
-  wire [3:0]  state, nextstate;
-  wire [14:0] controls;
+  reg [3:0]  state, nextstate;
+  reg [14:0] controls;
 
   // state register
-  always_ff @(posedge clk or posedge reset)			
+  always @(posedge clk or posedge reset)			
     if(reset) state <= FETCH;
     else state <= nextstate;
 
@@ -39,7 +39,7 @@ module maindec(input         clk, reset,
   // two states, FETCH and DECODE, for you.
 
   // next state logic
-  always_comb
+  always @(*)
     case(state)
       FETCH:   nextstate <= DECODE;
       DECODE:  case(op)
@@ -60,7 +60,7 @@ module maindec(input         clk, reset,
       MEMRD:    nextstate <= MEMWB; 
       MEMWB:    nextstate <= FETCH;
       MEMWR:    nextstate <= FETCH;
-      RTYPEEX:  nextstate <= RTYPEEX;
+      RTYPEEX:  nextstate <= RTYPEWB;
       RTYPEWB:  nextstate <= FETCH;
       BEQEX:    nextstate <= FETCH;
       ADDIEX:   nextstate <= ADDIWB;
@@ -77,7 +77,7 @@ module maindec(input         clk, reset,
   // ADD CODE HERE
   // Finish entering the output logic below.  We've entered the
   // output logic for the first two states, S0 and S1, for you.
-  always_comb
+  always @(*)
     case(state)
       FETCH:   controls <= 15'h5010;
       DECODE:  controls <= 15'h0030;

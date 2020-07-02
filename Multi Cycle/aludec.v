@@ -1,7 +1,7 @@
 
 module aludec(input   [5:0] funct,
               input   [1:0] aluop,
-              output  [3:0] alucontrol);
+              output  reg [3:0] alucontrol);
 
   always @ (*) begin
     case(aluop)

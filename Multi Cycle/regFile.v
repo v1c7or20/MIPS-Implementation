@@ -5,7 +5,7 @@ module regfile(input          clk,
                input   [31:0] wd3, 
                output  [31:0] rd1, rd2);
 
-  reg [31:0] rf[31:0];
+  reg [31:0] rf[0:31];
 
   // three ported register file
   // read two ports combinationally

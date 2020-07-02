@@ -15,7 +15,7 @@ module controller(input         clk, reset,
              alusrcb, pcsrc, aluop);
   aludec  ad(funct, aluop, alucontrol);
 
-  pcen = (zero & branch) || pcwrite;
+  assign pcen = (zero & branch) || pcwrite;
   
  
 endmodule
