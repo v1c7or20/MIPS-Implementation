@@ -19,6 +19,7 @@ module datapath(input          clk, reset,
   wire [31:0] signimm;   // the sign-extended immediate
   wire [31:0] signimmsh;	// the sign-extended immediate shifted left by 2
   wire [31:0] wd3, rd1, rd2;
+  wire [27:0] slmux;
 
   // op and funct fields to controller
   assign op = instr[31:26];
@@ -26,19 +27,17 @@ module datapath(input          clk, reset,
 
   flopenr #(32) flop1(clk, reset, pcen, pcnext, pc);
   
-  mux2 #(32)  pcbrmux(pc, aluout, iord,adr);
+  mux2 #(32)  pcbrmux(pc, aluout, iord, adr);
+    
+  flopenr #(32) flop2(clk, reset, irwrite, readdata, instr);
   
-  //mem falta
+  flopr #(32) flopr(clk, reset, readdata, data);
   
-  flopenr #(32) flop2(clk, reset, irwrite, memout, instr);
+  mux2 #(5)  regdestmux(instr[20:16], instr[15:11], regdst, writereg);
   
-  flopr #(32) flopr(clk, reset, memout, data);
+  mux2 #(32)  mentregmux(pcnext, data, memtoreg, w3);
   
-  mux2 #(5)  regdestmux(instr[20:16], instr[15:11], regdst);
-  
-  mux2 #(32)  mentregmux(aluout, data, w3);
-  
-  regfile rf (clk, regwrite, instr[25:21], instr[20:16], w3, rd1, rd2);
+  regfile rf (clk, regwrite, instr[25:21], instr[20:16], writereg, w3, rd1, rd2);
   
   signext     se(instr[15:0], signimm);
   
@@ -46,24 +45,21 @@ module datapath(input          clk, reset,
   
   flopr #(32) floprb(clk, reset, rd2, b);
   
-  mux2 #(5)  regdestmux(pc[31:18], a[31:28], srca);
+  mux2 #(5)  regdestmux(pc[31:18], a[31:28], alusrca,srca);
 
   sl2 s1(signimm, signimmsh);
 
-  mux4 #(32) m4(b, 32'd4, signimm, signimmsh);
+  mux4 #(32) m4(b, 32'd4, signimm, signimmsh, alusrcb, srcb);
 
   alu alu1(srca, srcb, alucontrol, zero, aluresult );
 
+  flopr #(32) floprb(clk, reset, aluresult, aluout);
+
+  sl2 sl22(instr[25:0], slmux);
+
+  mux3 #(32) muxend(aluresult, aluout, {pc[31:28], slmux}, pcsrc, pcnext);
   
-  // We've included parameterizable 3:1 and 4:1 muxes below for your use.
-
-  // Remember to give your instantiated modules applicable names
-  // such as pcreg (PC register), wdmux (Write Data Mux), etc.
-  // so it's easier to understand.
-
-  // ADD CODE HERE
-
-  // datapath
+  //parece que ya esta
   
 endmodule
 
