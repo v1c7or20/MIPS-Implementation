@@ -14,7 +14,7 @@ module mem(input          clk, we,
   // initialize memory with instructions
   initial
     begin
-      $readmemh("memfile.dat",RAM);  // "memfile.dat" contains your 
+      $readmemh("memfile2.dat",RAM);  // "memfile.dat" contains your 
                                      //    instructions in hex
                                      // you must create this file
     end

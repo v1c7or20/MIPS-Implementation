@@ -1,0 +1,124 @@
+WARNING: mipsmen.v:17: $readmemh: Standard inconsistency, following 1364-2005.
+WARNING: mipsmen.v:17: $readmemh(memfile2.dat): Not enough words in the file for the requested range [0:63].
+VCD info: dumpfile datapath.vcd opened for output.
+Clk: 0, reset: 1, writedata: 00000000, memwrite: 0, readdata: 20020005, dataadr: 00000000
+Clk: 1, reset: 1, writedata: 00000000, memwrite: 0, readdata: 20020005, dataadr: 00000000
+Clk: 0, reset: 1, writedata: 00000000, memwrite: 0, readdata: 20020005, dataadr: 00000000
+Clk: 1, reset: 1, writedata: 00000000, memwrite: 0, readdata: 20020005, dataadr: 00000000
+Clk: 1, reset: 0, writedata: 00000000, memwrite: 0, readdata: 20020005, dataadr: 00000000
+Clk: 0, reset: 0, writedata: 00000000, memwrite: 0, readdata: 20020005, dataadr: 00000000
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2003000c, dataadr: 00000004
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2003000c, dataadr: 00000004
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2003000c, dataadr: 00000004
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2003000c, dataadr: 00000004
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2003000c, dataadr: 00000004
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2003000c, dataadr: 00000004
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2003000c, dataadr: 00000004
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2003000c, dataadr: 00000004
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2067fff7, dataadr: 00000008
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2067fff7, dataadr: 00000008
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2067fff7, dataadr: 00000008
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2067fff7, dataadr: 00000008
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2067fff7, dataadr: 00000008
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2067fff7, dataadr: 00000008
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2067fff7, dataadr: 00000008
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 2067fff7, dataadr: 00000008
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e22025, dataadr: 0000000c
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e22025, dataadr: 0000000c
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e22025, dataadr: 0000000c
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e22025, dataadr: 0000000c
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e22025, dataadr: 0000000c
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e22025, dataadr: 0000000c
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e22025, dataadr: 0000000c
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e22025, dataadr: 0000000c
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00642824, dataadr: 00000010
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00642824, dataadr: 00000010
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00642824, dataadr: 00000010
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00642824, dataadr: 00000010
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00642824, dataadr: 00000010
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00642824, dataadr: 00000010
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00642824, dataadr: 00000010
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00642824, dataadr: 00000010
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00a42820, dataadr: 00000014
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00a42820, dataadr: 00000014
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00a42820, dataadr: 00000014
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00a42820, dataadr: 00000014
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00a42820, dataadr: 00000014
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00a42820, dataadr: 00000014
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00a42820, dataadr: 00000014
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00a42820, dataadr: 00000014
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10a7000a, dataadr: 00000018
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10a7000a, dataadr: 00000018
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10a7000a, dataadr: 00000018
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10a7000a, dataadr: 00000018
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10a7000a, dataadr: 00000018
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10a7000a, dataadr: 00000018
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10a7000a, dataadr: 00000018
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10a7000a, dataadr: 00000018
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 0064202a, dataadr: 0000001c
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 0064202a, dataadr: 0000001c
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 0064202a, dataadr: 0000001c
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 0064202a, dataadr: 0000001c
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 0064202a, dataadr: 0000001c
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 0064202a, dataadr: 0000001c
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10800001, dataadr: 00000020
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10800001, dataadr: 00000020
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10800001, dataadr: 00000020
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10800001, dataadr: 00000020
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10800001, dataadr: 00000020
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10800001, dataadr: 00000020
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10800001, dataadr: 00000020
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 10800001, dataadr: 00000020
+Clk: 1, reset: 0, writedata: 00000000, memwrite: 0, readdata: 20050000, dataadr: 00000024
+Clk: 0, reset: 0, writedata: 00000000, memwrite: 0, readdata: 20050000, dataadr: 00000024
+Clk: 1, reset: 0, writedata: 00000000, memwrite: 0, readdata: 20050000, dataadr: 00000024
+Clk: 0, reset: 0, writedata: 00000000, memwrite: 0, readdata: 20050000, dataadr: 00000024
+Clk: 1, reset: 0, writedata: 00000000, memwrite: 0, readdata: 20050000, dataadr: 00000024
+Clk: 0, reset: 0, writedata: 00000000, memwrite: 0, readdata: 20050000, dataadr: 00000024
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e2202a, dataadr: 00000028
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e2202a, dataadr: 00000028
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e2202a, dataadr: 00000028
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e2202a, dataadr: 00000028
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e2202a, dataadr: 00000028
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e2202a, dataadr: 00000028
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e2202a, dataadr: 00000028
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e2202a, dataadr: 00000028
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00853820, dataadr: 0000002c
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00853820, dataadr: 0000002c
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00853820, dataadr: 0000002c
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00853820, dataadr: 0000002c
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00853820, dataadr: 0000002c
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00853820, dataadr: 0000002c
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00853820, dataadr: 0000002c
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00853820, dataadr: 0000002c
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e23822, dataadr: 00000030
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e23822, dataadr: 00000030
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e23822, dataadr: 00000030
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e23822, dataadr: 00000030
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e23822, dataadr: 00000030
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e23822, dataadr: 00000030
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e23822, dataadr: 00000030
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 00e23822, dataadr: 00000030
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: ac670044, dataadr: 00000034
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: ac670044, dataadr: 00000034
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: ac670044, dataadr: 00000034
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: ac670044, dataadr: 00000034
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: ac670044, dataadr: 00000034
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: ac670044, dataadr: 00000034
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: ac670044, dataadr: 00000034
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: ac670044, dataadr: 00000034
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 8c020050, dataadr: 00000038
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 8c020050, dataadr: 00000038
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 8c020050, dataadr: 00000038
+Clk: 0, reset: 0, writedata: xxxxxxxx, memwrite: 0, readdata: 8c020050, dataadr: 00000038
+Clk: 1, reset: 0, writedata: xxxxxxxx, memwrite: 1, readdata: xxxxxxxx, dataadr: xxxxxxxx
+Simulation failed
+** VVP Stop(0) **
+** Flushing output streams.
+** Current simulation time is 555 ticks.
+> ^Cfinihs
+Unknown command: finihs
+Try the help command to get a summary
+of available commands.
+> finish
+** Continue **
