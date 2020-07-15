@@ -60,8 +60,6 @@ module datapath(input          clk, reset,
   sl2 sl22({6'b000000,instr[25:0]}, slmux);
 
   mux3 #(32) muxend(aluresult, aluout, {pc[31:28], slmux[27:0]}, pcsrc, pcnext);
-  
-  //parece que ya esta
-  
+ 
 endmodule
 
